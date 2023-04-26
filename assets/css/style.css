@@ -1,0 +1,186 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #171717;
+  background-color: #fff;
+  font-family: Averta, sans-serif;
+  background: rosybrown;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  color: inherit;
+  background: inherit;
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.header .navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  position: fixed;
+  top: 0;
+  transition: all 0.3s;
+}
+.header .navbar .logo {
+  width: 21.4rem;
+  height: 4.6rem;
+}
+.header .navbar .collapse-navbar {
+  display: flex;
+}
+.header .navbar .collapse-navbar .nav-link {
+  display: inline-block;
+  padding: 1rem 1.8rem;
+  font-size: 1.8rem;
+}
+.header .navbar .collapse-navbar .nav-link a {
+  transition: all 0.3s;
+}
+.header .navbar .collapse-navbar .nav-link:is(.dropdown) {
+  position: relative;
+}
+.header .navbar .collapse-navbar .nav-link:is(.dropdown) .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 37.8rem;
+  max-height: 76.8rem;
+  padding: 3rem 3.4rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.08);
+}
+.header .navbar .collapse-navbar .nav-link:is(.dropdown) .dropdown-menu p {
+  font-size: 1.4rem;
+  line-height: 1.71;
+  color: #4c4c4c;
+}
+.header .navbar .collapse-navbar .nav-link:is(.dropdown) .dropdown-menu hr {
+  margin-block: 2rem;
+  display: block;
+  height: 0.1rem;
+  border: 0;
+  background: #171717;
+  opacity: 0.25;
+}
+.header .navbar .collapse-navbar .nav-link:is(.dropdown) .dropdown-menu ul li {
+  font-size: 1.5rem;
+  padding-block: 0.65rem;
+  text-overflow: ellipsis;
+}
+.header .navbar .collapse-navbar .nav-link:is(.dropdown) .dropdown-menu ul li:hover {
+  color: #ccc;
+}
+.header .navbar .collapse-navbar .nav-link:is(.dropdown) .dropdown-menu::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 2.7rem;
+  border: 0.7rem solid transparent;
+  border-bottom: 0.8rem solid #fff;
+}
+.header .navbar .collapse-navbar .nav-link:is(.dropdown) .fa-solid {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.header .navbar .collapse-navbar .nav-link:is(.dropdown):hover .dropdown-menu {
+  display: block;
+}
+.header .navbar .collapse-navbar .nav-link:is(.dropdown):hover .fa-solid {
+  transform: rotate(180deg);
+}
+.header .navbar .right-part {
+  display: flex;
+}
+.header .navbar .right-part .menu-button {
+  background-color: #0c63b4;
+  width: 2rem;
+  height: 2rem;
+}
+.header .navbar:not(.onscroll) {
+  background: transparent;
+  border-bottom: none;
+}
+.header .navbar:not(.onscroll) .logo img {
+  filter: brightness(100) grayscale(100);
+}
+.header .navbar:not(.onscroll) .collapse-navbar .nav-link > a {
+  color: white;
+  text-shadow: 0 0 2rem #000f1e;
+}
+.header .navbar:not(.onscroll) .collapse-navbar .nav-link:is(.active) > a, .header .navbar:not(.onscroll) .collapse-navbar .nav-link:hover > a {
+  color: #ccc;
+}
+.header .navbar:is(.onscroll) {
+  background: #fff;
+  border-bottom: 0.2rem solid #f7f7f7;
+}
+.header .navbar:is(.onscroll) .collapse-navbar .nav-link > a {
+  color: #4c4c4c;
+  text-shadow: none;
+}
+.header .navbar:is(.onscroll) .collapse-navbar .nav-link:is(.active) > a, .header .navbar:is(.onscroll) .collapse-navbar .nav-link:hover > a {
+  color: #0c63b4;
+}
+@media screen and (min-width: 280px) {
+  .header .navbar .collapse-navbar {
+    display: none;
+  }
+  .header .navbar .right-part .languages {
+    display: none;
+  }
+  .header .navbar .right-part .call-button {
+    display: none;
+  }
+  .header .navbar .right-part .menu-button {
+    display: flex;
+  }
+}
+@media screen and (min-width: 550px) {
+  .header .navbar .collapse-navbar {
+    display: none;
+  }
+  .header .navbar .right-part .call-button {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header .navbar .collapse-navbar {
+    display: flex;
+  }
+  .header .navbar .right-part .languages {
+    display: block;
+  }
+  .header .navbar .right-part .menu-button {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
