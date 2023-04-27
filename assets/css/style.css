@@ -6,6 +6,22 @@
   box-sizing: border-box;
 }
 
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
 html {
   font-size: 62.5%;
 }
@@ -312,14 +328,22 @@ img {
 }
 
 .banner-section .carousel {
-  height: 70vh;
+  height: 73rem;
   color: #fff;
 }
-.banner-section .carousel img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.banner-section .carousel .carousel-item img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: 0.4s linear;
+  transition-property: transform;
 }
-.banner-section .carousel .dot {
+.banner-section .carousel .carousel-item:is(.active) {
+  animation: scaleAnimation 4s;
+}
+.banner-section .carousel .carousel-indicators {
+  margin-bottom: 4.8rem;
+}
+.banner-section .carousel .carousel-indicators .dot {
   background: transparent;
   width: 130px;
   height: -moz-max-content;
@@ -327,29 +351,33 @@ img {
   text-indent: 0;
   margin-inline: 0.5rem;
 }
-.banner-section .carousel .dot .bar {
+.banner-section .carousel .carousel-indicators .dot .bar-wrapper {
   height: 0.2rem;
   width: 100%;
-  position: relative;
   background: #fff;
-  transition: 0.4s linear;
-  transition-property: width, background-color;
+  position: relative;
 }
-.banner-section .carousel .dot h6 {
+.banner-section .carousel .carousel-indicators .dot .bar-wrapper .progress-bar {
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.4s linear;
+  transition-property: width;
+}
+.banner-section .carousel .carousel-indicators .dot h6 {
   margin-block: 1.5rem 0.8rem;
   font-size: 1.2rem;
   font-weight: bold;
+  width: 130px;
+  height: 43px;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
 }
-.banner-section .carousel .dot:is(.active) > .bar {
+.banner-section .carousel .carousel-indicators .dot:is(.active) .bar-wrapper .progress-bar {
   width: 100%;
   background-color: #0c63b4;
   animation: progressAnimation 4s;
-}
-@keyframes progressAnimation {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
 }/*# sourceMappingURL=style.css.map */
