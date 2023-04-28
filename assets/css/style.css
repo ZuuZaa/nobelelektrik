@@ -40,7 +40,7 @@ html {
 body {
   color: #171717;
   background-color: #fff;
-  font-family: Averta, sans-serif;
+  font-family: sans-serif;
   overflow: scroll;
   scroll-behavior: smooth;
 }
@@ -69,6 +69,25 @@ a {
 
 img {
   width: 100%;
+  height: 100%;
+}
+
+h3:is(.section-title) {
+  text-align: center;
+  font-size: calc(1.8rem + 0.6vw);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+}
+
+.logo-wrapper {
+  height: 6rem;
+}
+.logo-wrapper img {
+  filter: grayscale(100);
+}
+.logo-wrapper:hover img {
+  filter: grayscale(0);
 }
 
 .header {
@@ -483,4 +502,87 @@ section:not(.banner-section) {
 }
 .categories-section .categories-content .category-box:hover img {
   filter: invert(1);
+}
+
+.references-section .logo-wrapper {
+  margin: 2rem 1rem;
+  padding-inline: 1.2rem;
+}
+@media screen and (min-width: 220px) {
+  .references-section .logo-wrapper {
+    width: calc(100% - 2rem);
+  }
+  .references-section .logo-wrapper img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media screen and (min-width: 450px) {
+  .references-section .logo-wrapper {
+    width: calc(50% - 2rem);
+  }
+  .references-section .logo-wrapper img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .references-section .logo-wrapper img[alt=nexans] {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+@media screen and (min-width: 576px) {
+  .references-section .logo-wrapper {
+    width: calc(33.3333333333% - 2rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  .references-section .logo-wrapper {
+    width: calc(25% - 2rem);
+  }
+}
+@media screen and (min-width: 991px) {
+  .references-section .logo-wrapper {
+    width: calc(20% - 2rem);
+  }
+}
+
+.partners-section {
+  background: #f5f5f5;
+}
+.partners-section .logo-wrapper {
+  padding-inline: 1.2rem;
+  margin: 3.9rem 1rem;
+}
+.partners-section .logo-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.partners-section .logo-wrapper img[alt=metop], .partners-section .logo-wrapper img[alt=schneider], .partners-section .logo-wrapper img[alt=wago], .partners-section .logo-wrapper img[alt=safak], .partners-section .logo-wrapper img[alt=emas], .partners-section .logo-wrapper img[alt=pelsan], .partners-section .logo-wrapper img[alt=etk], .partners-section .logo-wrapper img[alt=cetinkaya], .partners-section .logo-wrapper img[alt=yavuz], .partners-section .logo-wrapper img[alt=entes] {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (min-width: 220px) {
+  .partners-section .logo-wrapper {
+    width: calc(50% - 2rem);
+  }
+}
+@media screen and (min-width: 450px) {
+  .partners-section .logo-wrapper {
+    width: calc(33.3333333333% - 2rem);
+  }
+}
+@media screen and (min-width: 576px) {
+  .partners-section .logo-wrapper {
+    width: calc(25% - 2rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  .partners-section .logo-wrapper {
+    width: calc(20% - 2rem);
+  }
+}
+@media screen and (min-width: 991px) {
+  .partners-section .logo-wrapper {
+    width: calc(16.6666666667% - 2rem);
+  }
 }/*# sourceMappingURL=style.css.map */

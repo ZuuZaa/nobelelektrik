@@ -50,7 +50,7 @@ html {
 body {
     color: #171717;
     background-color: #fff;
-    font-family: Averta, sans-serif;
+    font-family: sans-serif;
     overflow: scroll;
     scroll-behavior: smooth;
 
@@ -80,7 +80,30 @@ a {
 
 img {
     width: 100%;
+    height: 100%;
 }
+
+h3:is(.section-title) {
+    text-align: center;
+    font-size: calc(1.8rem + 0.6vw);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+}
+
+.logo-wrapper {
+
+    height: 6rem;
+
+    img {
+        filter: grayscale(100);
+    }
+
+    &:hover img {
+        filter: grayscale(0);
+    }
+}
+
 
 .header {
     position: relative;
@@ -463,6 +486,7 @@ section:not(.banner-section) {
 
 .banner-section {
     position: relative;
+
     &::after {
         content: "";
         position: absolute;
@@ -472,6 +496,7 @@ section:not(.banner-section) {
         height: 100%;
         background: rgba(0, 0, 0, 0.4);
     }
+
     .carousel {
         height: 75.2rem;
         min-height: 50rem;
@@ -615,6 +640,7 @@ section:not(.banner-section) {
                 width: 6.4rem;
                 height: 6.4rem;
             }
+
             h5 {
                 font-size: 18px;
                 line-height: 1.55;
@@ -626,10 +652,100 @@ section:not(.banner-section) {
                 color: #fff;
 
                 img {
-                    filter: invert(1);  
+                    filter: invert(1);
                 }
             }
         }
     }
 }
 
+.references-section {
+
+
+    .logo-wrapper {
+
+        margin: 2rem 1rem;
+        padding-inline: 1.2rem;
+
+        @media screen and (min-width: 220px) {
+            width: calc(100% - 2rem);
+
+            img {
+                object-fit: contain;
+            }
+        }
+
+        @media screen and (min-width: 450px) {
+            width: calc(50% - 2rem);
+
+            img {
+                object-fit: cover;
+
+                &[alt='nexans'] {
+                    object-fit: contain;
+                }
+            }
+        }
+
+        @media screen and (min-width: 576px) {
+            width: calc(100% / 3 - 2rem);
+
+        }
+
+        @media screen and (min-width: 768px) {
+            width: calc(25% - 2rem);
+        }
+
+        @media screen and (min-width: 991px) {
+            width: calc(20% - 2rem);
+        }
+    }
+}
+
+
+
+.partners-section {
+    background: #f5f5f5;
+
+    .logo-wrapper {
+        padding-inline: 1.2rem;
+        margin: 3.9rem 1rem;
+
+        img {
+            object-fit: cover;
+
+            &[alt='metop'],
+            &[alt='schneider'],
+            &[alt='wago'],
+            &[alt='safak'],
+            &[alt='emas'],
+            &[alt='pelsan'],
+            &[alt='etk'],
+            &[alt='cetinkaya'],
+            &[alt='yavuz'],
+            &[alt='entes'] {
+                object-fit: contain;
+            }
+        }
+
+        @media screen and (min-width: 220px) {
+            width: calc(100% / 2 - 2rem);
+        }
+
+        @media screen and (min-width: 450px) {
+            width: calc(100% / 3 - 2rem);
+        }
+
+        @media screen and (min-width: 576px) {
+            width: calc(100% / 4 - 2rem);
+        }
+
+        @media screen and (min-width: 768px) {
+            width: calc(100% / 5 - 2rem);
+        }
+
+        @media screen and (min-width: 991px) {
+            width: calc(100% / 6 - 2rem);
+        }
+    }
+}
