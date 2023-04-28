@@ -443,25 +443,19 @@ img {
 
 .banner-section {
     .carousel {
-        height: 73rem;
+        height: 75.2rem;
+        min-height: 50rem;
         color: #fff;
 
         .carousel-item{
 
             img {
                 
-                object-fit: contain;
-                transition: 0.4s linear;
-                transition-property: transform;
+                transition:transform 0.4s;
             }
             &:is(.active){
                 animation: scaleAnimation 4s;
             }
-
-
-
-
-    
     }
 
 
@@ -487,8 +481,7 @@ img {
                         position: absolute;
                         top: 0;
                         left: 0;
-                        transition: 0.4s linear;
-                        transition-property: width;
+                        transition: 0.4s width;
                     }
 
                 }

@@ -328,14 +328,12 @@ img {
 }
 
 .banner-section .carousel {
-  height: 73rem;
+  height: 75.2rem;
+  min-height: 50rem;
   color: #fff;
 }
 .banner-section .carousel .carousel-item img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  transition: 0.4s linear;
-  transition-property: transform;
+  transition: transform 0.4s;
 }
 .banner-section .carousel .carousel-item:is(.active) {
   animation: scaleAnimation 4s;
@@ -363,8 +361,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  transition: 0.4s linear;
-  transition-property: width;
+  transition: 0.4s width;
 }
 .banner-section .carousel .carousel-indicators .dot h6 {
   margin-block: 1.5rem 0.8rem;
