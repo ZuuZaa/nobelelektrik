@@ -14,6 +14,17 @@
     transform: scale(1.2);
   }
 }
+@keyframes opacityAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
 @keyframes progressAnimation {
   0% {
     width: 0;
@@ -335,8 +346,39 @@ img {
 .banner-section .carousel .carousel-item img {
   transition: transform 0.4s;
 }
-.banner-section .carousel .carousel-item:is(.active) {
+.banner-section .carousel .carousel-item:is(.active) img {
   animation: scaleAnimation 4s;
+}
+.banner-section .carousel .carousel-item .carousel-caption {
+  bottom: 50%;
+  left: 0;
+  transform: translateY(50%);
+  display: flex;
+  flex-direction: column;
+  padding-inline: 7rem;
+  animation: opacityAnimation 4s;
+}
+.banner-section .carousel .carousel-item .carousel-caption h2 {
+  font-size: 4rem;
+  max-width: 80rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  text-align: start;
+}
+.banner-section .carousel .carousel-item .carousel-caption .more {
+  text-align: center;
+  display: inline;
+  width: 20rem;
+  border: 0.2rem solid #0c63b4;
+  background-color: #0c63b4;
+  border-radius: 0.6rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-top: 2.4rem;
+  padding: 1.4rem 2.4rem;
+  transition: 0.3s;
 }
 .banner-section .carousel .carousel-indicators {
   margin-bottom: 4.8rem;

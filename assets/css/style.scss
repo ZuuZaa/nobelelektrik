@@ -17,6 +17,19 @@
     }
 }
 
+@keyframes opacityAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+
 @keyframes progressAnimation {
     0% {
         width: 0;
@@ -26,6 +39,9 @@
         width: 100%;
     }
 }
+
+
+
 html {
     font-size: 62.5%;
 }
@@ -447,16 +463,53 @@ img {
         min-height: 50rem;
         color: #fff;
 
-        .carousel-item{
+        .carousel-item {
 
             img {
-                
-                transition:transform 0.4s;
+
+                transition: transform 0.4s;
             }
-            &:is(.active){
+
+            &:is(.active) img {
                 animation: scaleAnimation 4s;
             }
-    }
+
+            .carousel-caption {
+                bottom: 50%;
+                left: 0;
+                transform: translateY(50%);
+                display: flex;
+                flex-direction: column;
+                padding-inline: 7rem;
+                animation: opacityAnimation 4s;
+
+                h2 {
+                    font-size: 4rem;
+                    max-width: 80rem;
+                    font-weight: bold;
+                    margin-bottom: 0.8rem;
+                    line-height: 1.2;
+                    text-align: start;
+                }
+
+                .more {
+                    text-align: center;
+                    display: inline;
+                    width: 20rem;
+                    border: 0.2rem solid #0c63b4;
+                    background-color: #0c63b4;
+                    border-radius: 0.6rem;
+                    font-weight: bold;
+                    font-size: 1.4rem;
+                    line-height: 1;
+                    margin-top: 2.4rem;
+                    padding: 1.4rem 2.4rem;
+                    -webkit-transition: 0.3s;
+                    transition: 0.3s;
+                    
+                }
+            }
+        }
 
 
         .carousel-indicators {
@@ -475,6 +528,7 @@ img {
                     width: 100%;
                     background: #fff;
                     position: relative;
+
                     .progress-bar {
                         display: inline-block;
                         height: 100%;
@@ -502,10 +556,7 @@ img {
                     background-color: #0c63b4;
                     animation: progressAnimation 4s;
                 }
-
-
             }
         }
-
     }
 }
