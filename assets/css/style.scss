@@ -861,7 +861,7 @@ footer {
 
             img {
                 object-fit: cover;
-                transform: scale(1.1);
+                transform: scale(1);
                 transition: transform .5s;
             }
         }
@@ -875,7 +875,7 @@ footer {
 
         &:hover {
             .img-wrapper img {
-                transform: scale(1.2);
+                transform: scale(1.05);
             }
         }
     }
@@ -925,6 +925,7 @@ footer {
             border-radius: 0.2rem;
             background-color: #32bd0f;
             transition: 300ms all ease;
+
             &:hover {
                 background-color: #25910a;
             }
@@ -943,12 +944,79 @@ footer {
     }
 }
 
-
-
-
-
-
-
 footer {
     background: #f5f5f5;
+    padding-block: 6rem 0;
+
+    .footer-nav {
+        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.08);
+        padding-bottom: 2.4rem;
+        margin-inline: 5%;
+    }
+
+    h6 {
+        font-size: 1.5rem;
+        margin-bottom: 1.6rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    a {
+        display: inline-block;
+        color: rgba(0, 0, 0, 0.55);
+        font-size: 1.3rem;
+        line-height: 1.2;
+        transition: color 0.15s ease-out 0s;
+        margin-bottom: 1.6rem;
+
+        &:hover {
+            color: #0c63b4;
+        }
+    }
+    address {
+        color: rgba(0, 0, 0, 0.55);
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+
+    .footer-extra {
+        padding: 4rem 5%;
+
+        .footer-brand {
+            display: inline-block;
+            width: 23.3rem;
+            height: 5rem;
+
+            img {
+                filter: grayscale(1);
+            }
+        }
+
+        .lang {
+            font-weight: 500;
+            color: #000;
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+            transition: color 0.15s ease-out 0s;
+            display: flex;
+            gap: 1.6rem;
+
+            li a:is(.active) {
+                color: #0c63b4;
+            }
+         }
+.social-media li a {
+    font-size: 2.2rem;
+    margin-left: 3rem;
+}
+
+
+        .bottom-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+
 }

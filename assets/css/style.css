@@ -686,7 +686,7 @@ footer {
 .news-section .news-card .img-wrapper img {
   -o-object-fit: cover;
      object-fit: cover;
-  transform: scale(1.1);
+  transform: scale(1);
   transition: transform 0.5s;
 }
 .news-section .news-card .news-title {
@@ -695,7 +695,7 @@ footer {
   font-weight: 500;
 }
 .news-section .news-card:hover .img-wrapper img {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .call-section .call-section-content {
@@ -749,4 +749,64 @@ footer {
 
 footer {
   background: #f5f5f5;
+  padding-block: 6rem 0;
+}
+footer .footer-nav {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 2.4rem;
+  margin-inline: 5%;
+}
+footer h6 {
+  font-size: 1.5rem;
+  margin-bottom: 1.6rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+footer a {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 1.3rem;
+  line-height: 1.2;
+  transition: color 0.15s ease-out 0s;
+  margin-bottom: 1.6rem;
+}
+footer a:hover {
+  color: #0c63b4;
+}
+footer address {
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+footer .footer-extra {
+  padding: 4rem 5%;
+}
+footer .footer-extra .footer-brand {
+  display: inline-block;
+  width: 23.3rem;
+  height: 5rem;
+}
+footer .footer-extra .footer-brand img {
+  filter: grayscale(1);
+}
+footer .footer-extra .lang {
+  font-weight: 500;
+  color: #000;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  transition: color 0.15s ease-out 0s;
+  display: flex;
+  gap: 1.6rem;
+}
+footer .footer-extra .lang li a:is(.active) {
+  color: #0c63b4;
+}
+footer .footer-extra .social-media li a {
+  font-size: 2.2rem;
+  margin-left: 3rem;
+}
+footer .footer-extra .bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
