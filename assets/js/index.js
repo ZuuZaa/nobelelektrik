@@ -28,6 +28,7 @@ window.addEventListener("resize", () => {
     collapsedNav.classList.remove('show-nav');
 });
 
-$('.carousel').carousel()
+
+
 
 
